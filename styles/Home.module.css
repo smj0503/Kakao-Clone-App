@@ -1,60 +1,272 @@
-.container {
-  padding: 0 2rem;
+/*시작 화면*/
+.home {
+  height: 100vh;
+  width: 360px;
+  background-color: #262626;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-rows: 40vh 60vh;
+}
+.homeDiv1 {
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+  padding-top: 100px;
+}
+.homeDiv2 {
+  padding-top: 50px;
+}
+.loginButton {
+  background-color: #ffe302;
+  height: 50px;
+  width: 100px;
+  border-radius: 8px;
+  border-style: none;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000000;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 14px;
 }
 
+/*기본 프레임*/
 .main {
   min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  width: 360px;
+  display: grid;
+  grid-template-columns: 60px 300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*===========================================================*/
+/*사이드 바*/
+.sidebar {
+  background-color: #404040;
+  display: grid;
+  grid-template-rows: 30px 60px 60px;
+}
+.friendListBtn {
+  padding: 18px;
+}
+.chattingListBtn {
+  padding: 18px;
+}
+
+/*===========================================================*/
+/*바디*/
+.content {
+  background-color: #262626;
+  display: grid;
+  grid-template-rows: 10px 30px;
+}
+/*바디-헤드*/
+.head {
+  display: grid;
+  grid-template-columns: 270px 30px;
   align-items: center;
 }
-
-.footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-}
-
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
-}
-
 .title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-left: 12px;
+}
+/*바디 - user 프로필*/
+.userProfile {
+  display: grid;
+  grid-template-columns: 60px 240px;
+  align-items: center;
+  margin-top: 12px;
+}
+.myProfileImage {
+  /*내 프로필 사진*/
+  border-radius: 16px;
+  margin-left: 12px;
+}
+.name {
+  font-size: 12px;
+  font-weight: 400;
+  color: #ffffff;
+}
+.profileImage {
+  /*친구 프로필 사진*/
+  border-radius: 12px;
+  margin-left: 16px;
 }
 
-.title,
-.description {
+/*===========================================================*/
+/*상세 프로필*/
+/*top*/
+.closeButton {
+  margin-top: 20px;
+  margin-left: 20px;
+  background-color: #848b91;
+  border-style: none;
+}
+/*middle*/
+.profileDetail {
+  height: 100vh;
+  width: 360px;
+  background-color: #848b91;
+  display: grid;
+  grid-template-rows: 50vh 30vh 20vh;
+  margin-left: auto;
+  margin-right: auto;
+}
+.userInfo {
+  display: grid;
+  grid-template-rows: 20vh 10vh;
+  justify-content: center;
+}
+.userProfileImage {
+  margin-top: 50px;
+  border-radius: 32px;
+}
+.userName {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ffffff;
   text-align: center;
 }
-
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
+/*bottom*/
+.bottom {
+  border-top-color: #e5e5e5;
+  border-top-width: 0.5px;
+  border-top-style: solid;
+  display: grid;
+  grid-template-rows: 10vh 10vh;
+  justify-content: center;
 }
+.chattingButton {
+  margin-top: 30px;
+}
+.startChatting {
+  font-size: 12px;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/*===========================================================*/
+/*채팅창 Head*/
+.chattingHead {
+  height: 13vh;
+  width: 360px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  position: fixed;
+  display: grid;
+  grid-template-rows: 3vh 10vh;
+  background-color: #191919;
+}
+.chattingTopBar {
+  padding-left: 8px;
+  padding-top: 6px;
+}
+.partnerInfo {
+  display: grid;
+  grid-template-columns: 60px 300px;
+}
+.chattingPartnerName {
+  font-size: 12px;
+  font-weight: 400;
+  color: #ffffff;
+  margin-top: 20px;
+}
+.chattingPartnerProfileImage {
+  border-radius: 16px;
+  margin-left: 12px;
+  margin-top: 16px;
+}
+
+/*채팅 창*/
+.privateConversation {
+  height: 85vh;
+  width: 360px;
+  padding-top: 13vh;
+  padding-left: 16px;
+  padding-right: 16px;
+  background-color: #191919;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+}
+.positionTo {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+.positionFrom {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 8px;
+}
+.messageTo {
+  background-color: #ffe302;
+  color: #000000;
+  font-weight: 400;
+  font-size: 12px;
+  padding: 8px;
+  border-radius: 6px;
+}
+.messageFrom {
+  background-color: #262626;
+  color: #7d7d7d;
+  font-weight: 400;
+  font-size: 12px;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+/*채팅창 bottom*/
+.messageInput {
+  background-color: #262626;
+  height: 15vh;
+  width: 360px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  position: fixed;
+  padding: 8px;
+}
+.inputBar {
+  width: 100%;
+  border-width: 0;
+  background-color: #262626;
+}
+.sendButton {
+  background-color: #353535;
+  height: 30px;
+  width: 56px;
+  border-radius: 6px;
+  border-style: none;
+  font-size: 12px;
+  color: #7d7d7d;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+.sendButtonActivated {
+  background-color: #ffe302;
+  height: 30px;
+  width: 56px;
+  border-radius: 6px;
+  border-style: none;
+  font-size: 12px;
+  color: #000000;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+
 
 .code {
   background: #fafafa;
@@ -65,47 +277,11 @@
     Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-}
-
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
-}
-
 .card:hover,
 .card:focus,
 .card:active {
   color: #0070f3;
   border-color: #0070f3;
-}
-
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
-}
-
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
-}
-
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
 }
 
 @media (max-width: 600px) {
